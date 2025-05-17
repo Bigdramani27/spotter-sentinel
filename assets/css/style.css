@@ -20319,14 +20319,14 @@ html[dir=rtl] .search-results .clear-all-link {
 }
 .dLVeol {
     justify-self: start;
-    gap: 12px;
+    gap: 2px;
     cursor: pointer;
     text-decoration: none;
     display: flex;
     -webkit-box-align: center;
     align-items: center;
     font-family: "Open Sans Regular";
-    font-size: 34px;
+    font-size: 38px;
   }
 
   .dialog {
@@ -20470,8 +20470,7 @@ html[dir=rtl] .search-results .clear-all-link {
 }
 
 .Container-module--container--1d00d.Container-module--grid--0e170 {
-    display: grid;
-    grid-template-columns: max(20px,50% - var(--contentWidth)/2) repeat(12,1fr) max(0px,50% - var(--contentWidth)/2);
+
     padding: unset
 }
 
@@ -21298,7 +21297,9 @@ html[dir=rtl] .search-results .clear-all-link {
 .AccuracySection-module--root--38813 .AccuracySection-module--loginMainPerk--14122 .AccuracySection-module--loginMainPerkCardBorder--e1d08 {
     border: 1px solid #e4e5e1;
     border-radius: 16px;
-    box-shadow: 0 1px 2px 0 rgba(24,25,22,.06);
+    box-shadow: 0px 1px 2px 0px rgba(24, 25, 22, 0.06), 
+   0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
     padding: 8px
 }
 
@@ -21390,10 +21391,12 @@ html[dir=rtl] .search-results .clear-all-link {
 }
 
 .AccuracySection-module--root--38813 .AccuracySection-module--loginMainPerkCardContentWrapper--2ae80 {
-    background: hsla(60,17%,98%,.6);
+   background: hsla(60, 17%, 98%, .6);
     border-top: 1px dashed #e4e5e1;
     display: flex;
-    width: 100%
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 @media(max-width: 860px) {
@@ -21617,10 +21620,10 @@ html[dir=rtl] .search-results .clear-all-link {
 }
 .spotterWall-module--spotterWall--3683f {
     background: #fafaf8;
-    border-radius: 16px;
-    height: 118px;
+   border-radius: 16px;
+    height: 160px;
     padding: 8px;
-    width: 167px
+    width: 280px
 }
 
 .spotterWall-module--spotterWall--3683f .spotterWall-module--spotterWallInner--9760f {
@@ -21661,11 +21664,6 @@ html[dir=rtl] .search-results .clear-all-link {
   }
   @media (min-width: 861px) {
     .WhyspotterSection-module--root--e8593:before {
-      background: linear-gradient(
-        8deg,
-        var(--button-background-gray) 50%,
-        transparent 50%
-      );
       bottom: 0;
       content: "";
       height: 720px;
@@ -21676,13 +21674,6 @@ html[dir=rtl] .search-results .clear-all-link {
       z-index: -10;
     }
     .WhyspotterSection-module--root--e8593:after {
-      background: linear-gradient(
-        8deg,
-        transparent calc(50% - 0.5px),
-        #e4e5e1 calc(50% - 0.5px),
-        #e4e5e1 calc(50% + 0.5px),
-        transparent calc(50% + 0.5px)
-      );
       bottom: 0;
       content: "";
       height: 720px;
@@ -21699,9 +21690,10 @@ html[dir=rtl] .search-results .clear-all-link {
     border-left: 1px dashed var(--dash-gray);
     border-right: 1px dashed var(--dash-gray);
     display: grid;
-    grid-column: 2/14;
-    grid-template-columns: repeat(12, 1fr);
+    /* grid-column: 2/14;
+    grid-template-columns: repeat(12, 1fr); */
     padding: 8px;
+   
   }
   @media (max-width: 640px) {
     .WhyspotterSection-module--root--e8593
@@ -21729,6 +21721,7 @@ html[dir=rtl] .search-results .clear-all-link {
       position: absolute;
       width: calc(100vw - 40px);
       z-index: -10;
+     
     }
   }
   .WhyspotterSection-module--root--e8593
@@ -21740,11 +21733,8 @@ html[dir=rtl] .search-results .clear-all-link {
   @media (min-width: 861px) {
     .WhyspotterSection-module--root--e8593
       .WhyspotterSection-module--titleSection--b9b4c {
-      background-color: #fff;
-      border: 1px solid #e4e5e1;
+      background-color: none;
       border-radius: 12px;
-      box-shadow: inset 0 1px 0 hsla(75, 7%, 89%, 0.3),
-        inset 0 -1px 0 hsla(80, 1%, 43%, 0.1);
       grid-column: 1/8;
     }
   }

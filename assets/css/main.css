@@ -8020,7 +8020,6 @@ article blockquote p {
 }
 .calendar-grid {
   --grid-gap-size: 12px;
-  --grid-border-color: #e1e2e3;
   --content-max-width: 1200px;
   display: grid;
   grid-template-columns: 1fr [content-start] minmax(0, var(--content-max-width)) [content-end] 1fr;
@@ -12647,6 +12646,8 @@ width: 100% !important;
 .dragging {
   cursor: grab;
   transition: transform 0.3s ease-in-out;
+    width: 400px
+
 }
 .loading {
   transition: transform 2.5s ease-in-out, opacity 2.3s ease,
@@ -12654,13 +12655,43 @@ width: 100% !important;
   width: 50%;
 }
 
+    .gathering {
+      width: 260px;
+      height: 160px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(34, 42, 53, 0.05),
+        0px 0px 0px 1px rgba(34, 42, 53, 0.08),
+        0px 1px 5px -4px rgba(19, 19, 22, 0.7);
+      padding-top: 20px;
+    }
 .target {
   transition: opacity 0.5s ease;
+    width: 330px;
 }
 
 .arrow {
   transition: opacity 0.5s ease;
 }
+
+@media (max-width: 1090px) {
+  .dragging{
+    width: 300px;
+  }
+  .target{
+    width:300px;
+  }
+
+}
+@media  (min-width: 1100px) and (max-width: 1300px) {
+  .dragging {
+    width: 380px;
+  }
+  .target {
+    width: 380px;
+  }
+}
+
 
 .expanded .loading {
   width: 50%;
@@ -12751,7 +12782,7 @@ width: 100% !important;
  
 }
 .price-space{
-  margin-top: 20px; margin-right:10px
+  margin-top: 20px; margin-right:20px
 }
 
 
