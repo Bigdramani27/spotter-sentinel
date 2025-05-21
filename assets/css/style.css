@@ -20366,7 +20366,7 @@ html[dir=rtl] .search-results .clear-all-link {
 }
 
 .HeroSection-module--root--36363 {
-    padding-top: 86px;
+    padding-top: 26px;
     padding-bottom:52px;
 }
 
@@ -21827,7 +21827,6 @@ html[dir=rtl] .search-results .clear-all-link {
     }
   }
 
-  .WhyspotterSection-module--root--e8593
     .WhyspotterSection-module--descriptionSection--f3c1c
     .WhyspotterSection-module--card--52e01 {
     background: #fff;
@@ -21838,15 +21837,12 @@ html[dir=rtl] .search-results .clear-all-link {
     overflow: hidden;
   }
   @media (max-width: 860px) {
-    .WhyspotterSection-module--root--e8593
       .WhyspotterSection-module--descriptionSection--f3c1c
       .WhyspotterSection-module--card--52e01 {
       border-radius: 8px;
     }
   }
-  .WhyspotterSection-module--root--e8593
-    .WhyspotterSection-module--descriptionSection--f3c1c
-    .WhyspotterSection-module--card--52e01
+
     .WhyspotterSection-module--content--1fade {
     -moz-column-gap: 16px;
     column-gap: 16px;
@@ -21854,34 +21850,26 @@ html[dir=rtl] .search-results .clear-all-link {
     padding: 32px 24px;
   }
   @media (max-width: 860px) {
-    .WhyspotterSection-module--root--e8593
-      .WhyspotterSection-module--descriptionSection--f3c1c
-      .WhyspotterSection-module--card--52e01
+
       .WhyspotterSection-module--content--1fade {
       flex-direction: column;
       padding: 16px 12px;
       row-gap: 4px;
     }
   }
-  .WhyspotterSection-module--root--e8593
-    .WhyspotterSection-module--descriptionSection--f3c1c
-    .WhyspotterSection-module--card--52e01
+
     .WhyspotterSection-module--content--1fade
     svg {
     flex-shrink: 0;
   }
   @media (max-width: 860px) {
-    .WhyspotterSection-module--root--e8593
-      .WhyspotterSection-module--descriptionSection--f3c1c
-      .WhyspotterSection-module--card--52e01
+
       .WhyspotterSection-module--content--1fade
       svg {
       margin-left: -3px;
     }
   }
-  .WhyspotterSection-module--root--e8593
-    .WhyspotterSection-module--descriptionSection--f3c1c
-    .WhyspotterSection-module--card--52e01
+
     .WhyspotterSection-module--content--1fade
     .WhyspotterSection-module--titleDescription--c5d71 {
     display: flex;
@@ -21889,17 +21877,13 @@ html[dir=rtl] .search-results .clear-all-link {
     row-gap: 8px;
   }
   @media (max-width: 860px) {
-    .WhyspotterSection-module--root--e8593
-      .WhyspotterSection-module--descriptionSection--f3c1c
-      .WhyspotterSection-module--card--52e01
+
       .WhyspotterSection-module--content--1fade
       .WhyspotterSection-module--titleDescription--c5d71 {
       row-gap: 4px;
     }
   }
-  .WhyspotterSection-module--root--e8593
-    .WhyspotterSection-module--descriptionSection--f3c1c
-    .WhyspotterSection-module--card--52e01
+
     .WhyspotterSection-module--content--1fade
     .WhyspotterSection-module--titleDescription--c5d71
     .WhyspotterSection-module--title--6fff3 {

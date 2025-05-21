@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Custom Form Grid</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f4f6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .round-container {
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 24px;
+      max-width: 1100px;
+      width: 100%;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .input-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .input-block {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 6px;
+      font-weight: bold;
+      font-size: 14px;
+      color: #000;
+    }
+
+    .input-with-icon {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .input-with-icon input,
+    .input-with-icon select {
+      flex: 1;
+    }
+
+    input,
+    select {
+      padding: 10px;
+      font-size: 14px;
+      border: 2px solid #ccc;
+      border-radius: 6px;
+      transition: border 0.3s;
+      width: 100%;
+    }
+
+    input:focus,
+    select:focus {
+      border-color: #00796b;
+      outline: none;
+    }
+
+    .optional-note {
+      font-size: 12px;
+      color: #666;
+      margin-top: 4px;
+    }
+
+    .error-message {
+      color: red;
+      font-size: 12px;
+      margin-top: 4px;
+      display: none;
+    }
+
+    .error-icon {
+      display: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: red;
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+      font-family: Arial, sans-serif;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .has-error label {
+      color: red;
+    }
+
+    .has-error input,
+    .has-error select {
+      border-color: red;
+    }
+
+    .has-error .error-message,
+    .has-error .error-icon {
+      display: flex;
+    }
+
+    .input-actions {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .main-submit-btn {
+      background-color: #00796b;
+      color: #fff;
+      border: none;
+      padding: 14px;
+      font-size: 16px;
+      border-radius: 30px;
+      width: 300px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .main-submit-btn:hover {
+      background-color: #005f56;
+    }
+
+    @media (max-width: 768px) {
+      .input-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .input-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="round-container">
+    <h2>Please complete the form below to request information concerning your personal data collected or used by our company.</h2>
+    <form id="requestForm" novalidate>
+      <div class="input-grid">
+
+        <div class="input-block">
+          <label for="name">Name</label>
+          <input type="text" id="name" />
+        </div>
+
+        <div class="input-block">
+          <label for="surname">Surname</label>
+          <input type="text" id="surname" />
+        </div>
+
+        <div class="input-block has-check">
+          <label for="email">Email address</label>
+          <div class="input-with-icon">
+            <input type="email" id="email" required />
+            <span class="error-icon">!</span>
+          </div>
+          <div class="error-message">Please enter your email address</div>
+        </div>
+
+        <div class="input-block has-check">
+          <label for="label">Label</label>
+          <div class="input-with-icon">
+            <select id="label" required>
+              <option value="">Select</option>
+              <option value="Label A">Label A</option>
+              <option value="Label B">Label B</option>
+            </select>
+            <span class="error-icon">!</span>
+          </div>
+          <div class="error-message">Please select a label</div>
+        </div>
+
+        <div class="input-block">
+          <label for="phone">Phone number</label>
+          <input type="tel" id="phone" />
+          <div class="optional-note">Optional - we never use this for marketing</div>
+        </div>
+
+        <div class="input-block">
+          <label for="request">Request</label>
+          <select id="request">
+            <option value="">Selection</option>
+            <option value="Data Access">Data Access</option>
+            <option value="Data Deletion">Data Deletion</option>
+          </select>
+        </div>
+
+        <div class="input-block has-check">
+          <label for="state">State</label>
+          <div class="input-with-icon">
+            <select id="state" required>
+              <option value="">Select state</option>
+              <option value="NY">New York</option>
+              <option value="CA">California</option>
+            </select>
+            <span class="error-icon">!</span>
+          </div>
+          <div class="error-message">Please select the state</div>
+        </div>
+
+        <div class="input-block">
+          <label for="zip">Zip code</label>
+          <input type="text" id="zip" />
+          <div class="optional-note">Hint or Error Message</div>
+        </div>
+
+      </div>
+
+      <div class="input-actions">
+        <button type="submit" class="main-submit-btn">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById('requestForm');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const requiredFields = ['email', 'label', 'state'];
+
+      requiredFields.forEach(id => {
+        const input = document.getElementById(id);
+        const block = input.closest('.input-block');
+
+        if (!input.value.trim()) {
+          block.classList.add('has-error');
+        } else {
+          block.classList.remove('has-error');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
